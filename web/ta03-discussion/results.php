@@ -1,3 +1,7 @@
+<?php
+    $user = $_GET["username"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +11,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="results.php" method="get">
-        User: <input type="text" name="username">
-        <input type="submit">
-    </form>
+<?php
+    echo "<h1>Welcome $user</h1>";
+?>
     
 </body>
 </html>
