@@ -1,7 +1,7 @@
 <?php
     $user = htmlspecialchars($_GET["username"]);
 
-    set_cookie("person-name", $user, time() + (86400 * 30));
+    //set_cookie("person-name", $user, time() + (86400 * 30));
 
 ?>
 <!DOCTYPE html>
