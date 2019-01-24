@@ -1,6 +1,6 @@
 <?php
     $user = htmlspecialchars($_GET["username"]);
-
+    $the user = $user;
 ?>
 <!DOCTYPE html>
 <html lang="en">
