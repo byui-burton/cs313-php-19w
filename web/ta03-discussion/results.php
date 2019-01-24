@@ -1,5 +1,5 @@
 <?php
-    $user = htmlspecialchars($_GET["username"]);
+    $user = $_GET["user"];
 
 ?>
 <!DOCTYPE html>
