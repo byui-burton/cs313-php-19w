@@ -1,6 +1,14 @@
 <?php
+    session_start();
 
-    $name = $_COOKIE["person-name"];
+    $name = $_SESSION["person-name"];
+    
+    if (isset($_SESSION["cart"])) {
+        $cart = $_SESSION["cart"];
+    } else {
+        $cart = array();
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +22,11 @@
     
 <?php
     echo "<h1>Shopping cart for user: $name</h1>";
+
+
+    foreach ($cart as $item) {
+        echo "$item<br>";
+    }
 ?>
 
 </body>

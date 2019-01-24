@@ -1,7 +1,9 @@
 <?php
     $user = htmlspecialchars($_GET["username"]);
 
-    setcookie("person-name", $user, time() + (86400 * 30));
+    session_start();
+    $_SESSION["person-name"] = $user;
+    $_SESSION["cart"] = array();
 
 ?>
 <!DOCTYPE html>
