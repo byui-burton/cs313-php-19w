@@ -1,8 +1,6 @@
 <?php
-    $user = htmlspecialchars($_GET["username"]);
 
-    set_cookie("person-name", $user, time() + (86400 * 30));
-
+    $name = $_COOKIE["person-name"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-    echo "<h1>Welcome $user, you are now signed in...</h1>";
-?>
     
+<?php
+    echo "<h1>Shopping cart for user: $name</h1>";
+?>
+
 </body>
 </html>
