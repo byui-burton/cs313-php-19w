@@ -5,6 +5,8 @@
     $_SESSION["person-name"] = $user;
     $_SESSION["cart"] = array();
 
+    // var_dump($_SESSION);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
