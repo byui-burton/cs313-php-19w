@@ -49,7 +49,8 @@ JOIN movie_actor ma ON m.id = ma.movie_id
 JOIN actor a ON ma.actor_id = a.id
 WHERE title = 'The Return of the King';
 
-SELECT a.name, m.title FROM movie m
+SELECT a.id AS actor_id, m.id AS movie_thing, a.name, m.title FROM movie m
 JOIN movie_actor ma ON m.id = ma.movie_id
 JOIN actor a ON ma.actor_id = a.id
 WHERE title = 'The Return of the King';
+
