@@ -4,7 +4,7 @@ $course_id = htmlspecialchars($_POST['course_id']);
 $date = htmlspecialchars($_POST['date']);
 $content = htmlspecialchars($_POST['content']);
 
-echo "Trying to insert: courseid: $course_id, date: $date, content: $content";
+//echo "Trying to insert: courseid: $course_id, date: $date, content: $content";
 
 require_once("dbconnect.php");
 $db = get_db();
@@ -17,6 +17,9 @@ $statement->bindValue(':content', $content, PDO::PARAM_STR);
 $statement->bindValue(':course_id', $course_id, PDO::PARAM_INT);
 $result = $statement->execute();
 
-echo "$result";
+//echo "$result";
+flush();
+header("Location:notes.php?course_id=$course_id");
+die();
 
 ?>
