@@ -4,6 +4,13 @@ $db = get_db();
 
 $course_id = $_GET["course_id"];
 
+// Get the Course from the DB
+$query = 'SELECT id, name, course_code FROM course WHERE id=:id';
+$statement = $db->prepare($query);
+$statement->bindValue(':id', $course_id, PDO::PARAM_INT);
+$statement->execute();
+$course = $statement->fetch(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +23,9 @@ $course_id = $_GET["course_id"];
 <body>
 
 <?php
-    echo "<h1>Notes for $course_id</h1>";
+    $course_name = $course['name'];
+    $course_code = $course['course_code'];
+    echo "<h1>Notes for $course_name - $course_code</h1>";
 ?>
     
 </body>
