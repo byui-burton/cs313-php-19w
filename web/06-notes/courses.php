@@ -17,7 +17,7 @@ $courses = $statement->fetchAll(PDO::FETCH_ASSOC);
     <title>Courses</title>
 </head>
 <body>
-    <h1>Notes App</h1>
+    <h1>Notes App (update)</h1>
 
     <h2>Courses</h2>
 
